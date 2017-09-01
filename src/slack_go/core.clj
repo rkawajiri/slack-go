@@ -245,6 +245,9 @@
   (POST "/go" [channel_id user_name text :as req]
     (print req)
     (print-return (posted channel_id user_name text)))
+  (GET "/go" [channel_id user_name text :as req]
+    (print req)
+    (print-return (posted channel_id user_name text)))
   (route/resources "/")
   (route/not-found "not found"))
 
